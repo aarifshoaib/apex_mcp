@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "apex-mcp": {
+      "command": "node",
+      "args": ["src/index.js"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "_comment_local_oracle": "For Oracle XE / Free / on-premise — no wallet needed",
+        "ORACLE_DB_USER": "YOUR_SCHEMA",
+        "ORACLE_DB_PASS": "YOUR_PASSWORD",
+        "ORACLE_HOST": "localhost",
+        "ORACLE_PORT": "1521",
+        "ORACLE_SERVICE": "XEPDB1",
+
+        "_comment_adb": "For Oracle ADB (cloud) — uncomment and fill wallet params",
+        "_ORACLE_DSN": "mydb_tp",
+        "_ORACLE_WALLET_DIR": "/path/to/wallet",
+        "_ORACLE_WALLET_PASSWORD": "YOUR_WALLET_PW",
+
+        "_comment_apex": "APEX workspace settings (required for all connections)",
+        "APEX_WORKSPACE_ID": "YOUR_NUMERIC_WORKSPACE_ID",
+        "APEX_SCHEMA": "YOUR_SCHEMA",
+        "APEX_WORKSPACE_NAME": "YOUR_WORKSPACE_NAME"
+      }
+    }
+  }
+}
